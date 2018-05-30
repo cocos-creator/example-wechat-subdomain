@@ -33,7 +33,7 @@
     "appid": "wx6ac3f5090a6b99c5",
     "isSubdomain": false,
     "orientation": "landscape",
-    "subContext": "wx-sub-project"
+    "subContext": "wx-open-data-project"
   },
   "xxteaKey": "81a953b2-ec65-45",
   "zipCompressJs": true
