@@ -7,7 +7,7 @@ cc.Class({
     },
 
     start () {
-        this._isShow = false;
+        this._isShow = true;
         this.tex = new cc.Texture2D();
     },
 
@@ -23,6 +23,8 @@ cc.Class({
         if (!this.tex) {
             return;
         }
+        var openDataContext = wx.getOpenDataContext();
+        var sharedCanvas = openDataContext.canvas;
         this.tex.initWithElement(sharedCanvas);
         this.tex.handleLoadedTexture();
         this.display.spriteFrame = new cc.SpriteFrame(this.tex);

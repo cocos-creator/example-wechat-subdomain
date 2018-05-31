@@ -9,7 +9,7 @@
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "jailbreakPlatform": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
@@ -19,22 +19,23 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.MapEditor",
+  "packageName": "org.cocos2d.wx-sub-test",
   "privateKey": "",
   "qqplay": {
     "orientation": "portrait"
   },
-  "renderMode": "0",
-  "startScene": "739ddcda-7d7e-4b08-9081-7e95f98cc08f",
-  "title": "wx-main-",
+  "renderMode": "1",
+  "startScene": "088db947-d2bf-4c47-b64f-f30bc4bc0faa",
+  "title": "wx-open-data-project",
   "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "",
     "appid": "wx6ac3f5090a6b99c5",
-    "isSubdomain": false,
-    "orientation": "landscape",
-    "subContext": "wx-sub-test"
+    "buildsub": true,
+    "hasSubdomain": true,
+    "isSubdomain": true,
+    "orientation": "landscape"
   },
-  "xxteaKey": "81a953b2-ec65-45",
+  "xxteaKey": "0f6c60db-2545-4d",
   "zipCompressJs": true
 }
