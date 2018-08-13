@@ -15,7 +15,10 @@
   "design-resolution-width": 960,
   "excluded-modules": [
     "WebGL Renderer",
+    "Renderer Texture",
+    "Dynamic Atlas",
     "LabelOutline",
+    "Mask",
     "Graphics",
     "ParticleSystem",
     "TiledMap",
@@ -36,6 +39,7 @@
     "AudioSource",
     "Animation",
     "Collider",
+    "Action",
     "Physics",
     "NodePool",
     "StudioComponent",

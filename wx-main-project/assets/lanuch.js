@@ -3,35 +3,22 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        display: cc.Sprite
+        display: cc.Node
     },
 
     start () {
         this._isShow = true;
-        this.tex = new cc.Texture2D();
+        this._show = cc.moveTo(0.5, 0, 110);
+        this._hide = cc.moveTo(0.5, 0, 1000);
     },
 
     onClick () {
         this._isShow = !this._isShow;
-        // 发消息给子域
-        wx.postMessage({
-            message: this._isShow ? 'Show' : 'Hide'
-        })
-    },
-
-    _updaetSubDomainCanvas () {
-        if (!this.tex) {
-            return;
+        if (this._isShow) {
+            this.display.runAction(this._show);
         }
-        var openDataContext = wx.getOpenDataContext();
-        var sharedCanvas = openDataContext.canvas;
-        this.tex.initWithElement(sharedCanvas);
-        this.tex.handleLoadedTexture();
-        this.display.spriteFrame = new cc.SpriteFrame(this.tex);
-    },
-
-    update () {
-        this._updaetSubDomainCanvas();
+        else {
+            this.display.runAction(this._hide);
+        }
     }
-
 });

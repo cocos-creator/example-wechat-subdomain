@@ -14,16 +14,21 @@
   "design-resolution-height": 640,
   "design-resolution-width": 960,
   "excluded-modules": [
+    "Canvas Renderer",
+    "Renderer Texture",
+    "Dynamic Atlas",
     "ParticleSystem",
+    "TiledMap",
     "Spine Skeleton",
+    "DragonBones",
+    "MotionStreak",
     "VideoPlayer",
     "WebView",
-    "MotionStreak",
     "Collider",
-    "DragonBones",
     "Physics",
     "StudioComponent",
-    "Chipmunk"
+    "Intersection",
+    "Native NetWork"
   ],
   "fit-height": true,
   "fit-width": false,
@@ -36,6 +41,5 @@
     "width": 960
   },
   "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }
