@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3265625,
-      "y": 0.3265625,
+      "x": 0.684375,
+      "y": 0.684375,
       "z": 1
     },
     "_quat": {
@@ -724,6 +724,8 @@
     "display": {
       "__id__": 8
     },
+    "userName": null,
+    "userIcon": null,
     "_id": "454X/I5mxE4bujO3FiNkby"
   }
 ]
