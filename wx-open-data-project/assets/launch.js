@@ -10,36 +10,47 @@ cc.Class({
         let _self = this;
 
         wx.onMessage( data => {
-            if (data.nickName && data.avatarUrl) {
-                _self.showUserData(data.nickName, data.avatarUrl);
-                // fill the content by the blank targets.
-                (function () {
-                    for (let i = 0; i < 5; i++) {
-                        let node = cc.instantiate(_self.prefab);
-                        node.parent = _self.content;
-                    }
-                })();
-            };
+            console.log(data.message);
         });
 
+        // https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getUserInfo.html
+        wx.getUserInfo({
+            openIdList: ['selfOpenId'],
+            lang: 'zh_CN',
+            success: (res) => {
+                console.log('success', res.data);
+                let userInfo = res.data[0];
+                _self.createUserBlock(userInfo);
+            },
+            fail: (res) => {
+                reject(res);
+            }
+        });
+        
+        // https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getFriendCloudStorage.html
         wx.getFriendCloudStorage({
             success: function (res) {
-                for (let i = 0; i < 5; i++) {
-                    let friend = res.data[i];
-                    if (!_self.preSettingData(friend, ' stop getting friends\' infos')) {
-                        return;
+                for (let i = 0; i < 6; i++) {
+                    let friendInfo = res.data[i];
+                    if (!friendInfo) {
+                        _self.createPrefab();
+                        continue;
                     }
+                    _self.createUserBlock(friendInfo);
                 }
             },
             fail: function (res) {
-                console.log(res);
+                console.error(res);
             }
         });
     },
 
-    showUserData (nickName, avatarUrl) {
-        let node = cc.instantiate(this.prefab);
-        node.parent = this.content;
+    createUserBlock (user) {
+        let node = this.createPrefab();
+        // getUserInfo will return the nickName, getFriendCloudStorage will return the nickname.
+        let nickName = user.nickName ? user.nickName : user.nickname;
+        let avatarUrl = user.avatarUrl;
+
         let userName = node.getChildByName('userName').getComponent(cc.Label);
         let userIcon = node.getChildByName('mask').children[0].getComponent(cc.Sprite);
 
@@ -49,19 +60,14 @@ cc.Class({
             url: avatarUrl, type: 'png'
         }, (err, texture) => {
             if (err) console.error(err);
-            console.log(texture);
             userIcon.spriteFrame = new cc.SpriteFrame(texture);
         });                   
     },
-    
-    preSettingData (user, str) {
-        if (!user) {
-            console.log(str);
-            return false;
-        }
-        let nickName = user.nickname;
-        let avatarUrl = user.avatarUrl;
-        this.showUserData(nickName, avatarUrl);
-        return true;
+
+    createPrefab () {
+        let node = cc.instantiate(this.prefab);
+        node.parent = this.content;
+        return node;
     }
+
 });

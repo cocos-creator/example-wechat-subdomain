@@ -37,5 +37,13 @@
     "subContextWidth": 400
   },
   "xxteaKey": "81a953b2-ec65-45",
-  "zipCompressJs": true
+  "zipCompressJs": true,
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "pathPattern": "",
+    "scheme": "https",
+    "host": "",
+    "skipRecord": false,
+    "recordPath": ""
+  }
 }
