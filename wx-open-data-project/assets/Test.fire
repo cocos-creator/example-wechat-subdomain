@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.607097442197523,
+      "y": 0.607097442197523,
       "z": 1
     },
     "_quat": {
@@ -519,9 +519,6 @@
       "__id__": 5
     },
     "_enabled": true,
-    "content": {
-      "__id__": 7
-    },
     "horizontal": true,
     "vertical": true,
     "inertia": true,
@@ -530,6 +527,12 @@
     "bounceDuration": 0.23,
     "scrollEvents": [],
     "cancelInnerEvents": true,
+    "_N$content": {
+      "__id__": 7
+    },
+    "content": {
+      "__id__": 7
+    },
     "_N$horizontalScrollBar": null,
     "_N$verticalScrollBar": null,
     "_id": "b4HoUznp9HN5/JWGm3VI20"
