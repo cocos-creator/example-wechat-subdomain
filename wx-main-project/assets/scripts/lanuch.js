@@ -88,11 +88,14 @@ cc.Class({
 
     onClick () {
         this._isShow = !this._isShow;
+        let comp = this.wxSubContextView.getComponent(cc.WXSubContextView);
         if (this._isShow) {
             this.wxSubContextView.runAction(this._showAction);
+            comp.enabled = true;
         }
         else {
             this.wxSubContextView.runAction(this._hideAction);
+            comp.enabled = false;
         }
     },
 
