@@ -109,4 +109,16 @@ cc.Class({
             this.readme.node.parent.active = false;
         }, this);
     },
+
+    zoomInSubContextView () {
+        this.wxSubContextView.runAction(cc.scaleBy(.2, 1.2));
+    },
+
+    zoomOutSubContextView () {
+        this.wxSubContextView.runAction(cc.scaleBy(.2, .8));
+    },
+
+    resetSubContextViewSize () {
+        this.wxSubContextView.runAction(cc.scaleTo(.2, 1));
+    },
 });
