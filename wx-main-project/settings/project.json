@@ -1,4 +1,5 @@
 {
+  "assets-sort-type": "name",
   "collision-matrix": [
     [
       true
@@ -7,32 +8,35 @@
   "design-resolution-height": 640,
   "design-resolution-width": 960,
   "excluded-modules": [
+    "Dynamic Atlas",
+    "ParticleSystem",
+    "TiledMap",
+    "Spine Skeleton",
+    "DragonBones",
+    "RichText",
+    "MotionStreak",
+    "ProgressBar",
+    "ScrollBar",
+    "ScrollView",
+    "Toggle",
+    "PageView",
+    "PageViewIndicator",
+    "Slider",
+    "EditBox",
+    "VideoPlayer",
+    "WebView",
     "Audio",
     "AudioSource",
     "Animation",
     "Collider",
-    "Dynamic Atlas",
-    "DragonBones",
-    "EditBox",
-    "Intersection",
-    "MotionStreak",
-    "NodePool",
-    "Native Socket",
     "Physics",
-    "PageView",
-    "PageViewIndicator",
-    "ProgressBar",
-    "ParticleSystem",
-    "RichText",
-    "Slider",
-    "ScrollBar",
-    "ScrollView",
-    "Spine Skeleton",
+    "NodePool",
     "StudioComponent",
-    "Toggle",
-    "TiledMap",
-    "VideoPlayer",
-    "WebView"
+    "Intersection",
+    "Native Socket",
+    "Geom Utils",
+    "3D",
+    "3D Primitive"
   ],
   "facebook": {
     "appID": "",
@@ -49,17 +53,12 @@
   "group-list": [
     "default"
   ],
-  "last-module-event-record-time": 1548318205914,
+  "last-module-event-record-time": 1567651134568,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
     "width": 960
   },
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false,
-  "assets-sort-type": "name",
-  "group_list": [
-    "default"
-  ],
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }

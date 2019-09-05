@@ -60,9 +60,11 @@ cc.Class({
             let userInfo = res.userInfo;
             if (!userInfo) {
                 this.tips.string = res.errMsg;
+                this.tips.node.active = true;
                 return;
             }
 
+            this.tips.node.active = false;
             this.nickName.string = userInfo.nickName;
 
             cc.loader.load({url: userInfo.avatarUrl, type: 'png'}, (err, texture) => {

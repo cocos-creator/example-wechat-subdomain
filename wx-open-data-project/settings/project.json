@@ -1,4 +1,5 @@
 {
+  "assets-sort-type": "name",
   "collision-matrix": [
     [
       true
@@ -7,9 +8,7 @@
   "design-resolution-height": 640,
   "design-resolution-width": 960,
   "excluded-modules": [
-    "Renderer Texture",
     "Dynamic Atlas",
-    "LabelOutline",
     "ParticleSystem",
     "TiledMap",
     "Spine Skeleton",
@@ -34,7 +33,10 @@
     "NodePool",
     "StudioComponent",
     "Intersection",
-    "Native Socket"
+    "Native Socket",
+    "Geom Utils",
+    "3D",
+    "3D Primitive"
   ],
   "facebook": {
     "appID": "",
@@ -51,13 +53,12 @@
   "group-list": [
     "default"
   ],
-  "last-module-event-record-time": 1548389051878,
+  "last-module-event-record-time": 1567651260366,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
     "width": 960
   },
-  "use-customize-simulator": false,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-customize-simulator": true,
+  "use-project-simulator-setting": false
 }
