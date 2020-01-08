@@ -25,7 +25,7 @@ cc.Class({
     initAction () {
         this._isShow = false;
         this.wxSubContextView.y = 1000;
-        this._showAction = cc.moveTo(0.5, this.wxSubContextView.x, 110);
+        this._showAction = cc.moveTo(0.5, this.wxSubContextView.x, 0);
         this._hideAction = cc.moveTo(0.5, this.wxSubContextView.x, 1000);
 
         this.background.on('touchstart', this.onClick, this);
